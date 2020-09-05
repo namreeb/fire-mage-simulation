@@ -319,7 +319,7 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         config_file = sys.argv[1]
     else:
-        config_file = os.path.join(*['..', 'config', 'test.json'])
+        config_file = os.path.join(*[os.path.dirname(__file__), '..', 'config', 'test.json'])
     with open(config_file, 'rt') as fid:
         config = json.load(fid)
     if len(sys.argv) > 2:
